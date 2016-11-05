@@ -5,17 +5,36 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
+# or operating system, you probably want to add a global ignore instead:
+#   git config --global core.excludesfile '~/.gitignore_global'
+
+# Ignore bundler config.
 /.bundle
+.DS_Store
 
-# Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
 
-# Ignore all logfiles and tempfiles.
+# ignore all logfiles and tempfiles.
+config/database.yml
+dump.rdb
 /log/*
-/tmp/*
 !/log/.keep
-!/tmp/.keep
-
-# Ignore Byebug command history file.
-.byebug_history
+/tmp
+/data/congress/
+/data/us/
+/data/fec
+/data/hearings/
+/data/photos/
+/data/fec/ftp/
+/data/census/states/
+/data/research/
+/data/openstates/
+/data/lobbying_federal_domestic/
+/data/lobby/
+/data/house_disburse/
+/data/pyscripts/
+/data/scrapy
+/vendor/assets/components
+.env
+.sass-cache
+/.venv
+/node_modules
