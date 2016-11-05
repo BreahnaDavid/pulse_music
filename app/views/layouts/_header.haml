@@ -1,12 +1,28 @@
-.navbar.navbar-default.navbar-static-top
-  .container
-    %button.navbar-toggle{ type: "button", 'data-toggle': "collapse", 'data-target': ".navbar-responsive-collapse"}
-      %span.icon-bar
-      %span.icon-bar
-      %span.icon-bar
-      %a.navbar-brand
-        PulseMusic
-    .navbar-collapse.collapse.navbar-responsive-collapse
-      %ul.nav.navbar-nav
-        %li= link_to "Photo", root_path
-        %li= link_to "Video", emotion_video_path
+%nav#mainNav.navbar.navbar-default.navbar-fixed-top
+  .container-fluid
+    / Brand and toggle get grouped for better mobile display
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        Menu
+        %i.fa.fa-bars
+      %a.navbar-brand.page-scroll{:href => "#page-top"} Pulse Music
+    / Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a.page-scroll{:href => "#about"} About
+        %li
+          %a.page-scroll{:href => "#services"} Feelings
+        %li
+          %a.page-scroll{:href => "#portfolio"} Portfolio
+        %li
+          %a.page-scroll{:href => "#contact"} Contact
+
+%header
+  .header-content
+    .header-content-inner
+      %h1#homeHeading Pulse Music
+      %hr
+      %p Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!
+    %a.btn.btn-primary.btn-xl.page-scroll{:href => "#about"} Find Out More

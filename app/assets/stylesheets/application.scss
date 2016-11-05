@@ -1,2 +1,8 @@
- @import "bootstrap-sprockets";
- @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "vendor/font-awesome/css/font-awesome.min.css";
+@import "vendor/font-awesome/style.css";
+@import "vendor/magnific-popup/magnific-popup.css";
+
+@import "creative";

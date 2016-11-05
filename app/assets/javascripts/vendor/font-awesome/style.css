@@ -1,0 +1,132 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?w1xmjm');
+  src:  url('fonts/icomoon.eot?w1xmjm#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?w1xmjm') format('truetype'),
+    url('fonts/icomoon.woff?w1xmjm') format('woff'),
+    url('fonts/icomoon.svg?w1xmjm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-happy:before {
+  content: "\e900";
+}
+.icon-happy2:before {
+  content: "\e901";
+}
+.icon-smile:before {
+  content: "\e902";
+}
+.icon-smile2:before {
+  content: "\e903";
+}
+.icon-tongue:before {
+  content: "\e904";
+}
+.icon-tongue2:before {
+  content: "\e905";
+}
+.icon-sad:before {
+  content: "\e906";
+}
+.icon-sad2:before {
+  content: "\e907";
+}
+.icon-wink:before {
+  content: "\e908";
+}
+.icon-grin:before {
+  content: "\e909";
+}
+.icon-grin2:before {
+  content: "\e90a";
+}
+.icon-cool:before {
+  content: "\e90b";
+}
+.icon-cool2:before {
+  content: "\e90c";
+}
+.icon-angry:before {
+  content: "\e90d";
+}
+.icon-angry2:before {
+  content: "\e90e";
+}
+.icon-evil:before {
+  content: "\e90f";
+}
+.icon-evil2:before {
+  content: "\e910";
+}
+.icon-shocked:before {
+  content: "\e911";
+}
+.icon-shocked2:before {
+  content: "\e912";
+}
+.icon-baffled:before {
+  content: "\e913";
+}
+.icon-baffled2:before {
+  content: "\e914";
+}
+.icon-confused:before {
+  content: "\e915";
+}
+.icon-confused2:before {
+  content: "\e916";
+}
+.icon-neutral:before {
+  content: "\e917";
+}
+.icon-neutral2:before {
+  content: "\e918";
+}
+.icon-hipster:before {
+  content: "\e919";
+}
+.icon-hipster2:before {
+  content: "\e91a";
+}
+.icon-wondering:before {
+  content: "\e91b";
+}
+.icon-wondering2:before {
+  content: "\e91c";
+}
+.icon-sleepy:before {
+  content: "\e91d";
+}
+.icon-sleepy2:before {
+  content: "\e91e";
+}
+.icon-frustrated:before {
+  content: "\e91f";
+}
+.icon-frustrated2:before {
+  content: "\e920";
+}
+.icon-crying:before {
+  content: "\e921";
+}
+.icon-crying2:before {
+  content: "\e922";
+}
+

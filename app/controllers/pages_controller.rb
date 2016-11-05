@@ -1,6 +1,9 @@
 class PagesController < ApplicationController
   helper :headshot
 
+  def index
+  end
+
   def emotion_photo
   end
 

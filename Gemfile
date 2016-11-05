@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 gem 'headshot'
 gem 'rspotify', '1.18.0'
 gem 'mime-types', '2.0'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
