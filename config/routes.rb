@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get '/' => 'pages#index', as: :root
+  post "headshot/capture" => 'headshot#capture', :as => :headshot_capture
+
+  get '/emotion_video' => 'pages#emotion_video', as: :emotion_video
+  get '/' => 'pages#emotion_photo', as: :root
 end
