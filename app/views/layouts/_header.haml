@@ -7,6 +7,7 @@
         Menu
         %i.fa.fa-bars
       %a.navbar-brand.page-scroll{:href => "#page-top"} Pulse Music
+      = image_tag "logo.gif", class: 'navbar-brand page-scroll'
     / Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
@@ -15,14 +16,16 @@
         %li
           %a.page-scroll{:href => "#services"} Feelings
         %li
-          %a.page-scroll{:href => "#portfolio"} Portfolio
+          %a.page-scroll{:href => "#photodiv"} Take Photo
         %li
-          %a.page-scroll{:href => "#contact"} Contact
+          %a.page-scroll{:href => "#portfolio"} Portfolio
 
 %header
   .header-content
     .header-content-inner
       %h1#homeHeading Pulse Music
       %hr
-      %p Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!
+      %p{ style: "color:black;" } Change your feelings through the music...
+      %br
+      %br
     %a.btn.btn-primary.btn-xl.page-scroll{:href => "#about"} Find Out More

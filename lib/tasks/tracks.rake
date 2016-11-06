@@ -21,10 +21,6 @@ namespace :tracks do
       track.liveness = meta.liveness
       track.speechiness = meta.speechiness
       track.valence = meta.valence
-
-      track.valence = meta.valence
-      track.energy = meta.energy
-      track.danceability = meta.danceability
       puts track.save
     end
   end

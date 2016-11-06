@@ -1,4 +1,4 @@
-%section#about.bg-primary
+%section#photodiv.bg-primary
   .container
     .row
       .col-lg-8.col-lg-offset-2.text-center
@@ -28,7 +28,7 @@
         }
       });
 
-      getMusic(max_emotion, max_value);
+      getMusic(max_emotion);
 
     } else {
       alert( 'No faces detected, PLease Try Again!' );
@@ -57,12 +57,11 @@
     sendDetectRequest();
   });
 
-  function getMusic(emotion, value) {
+  function getMusic(emotion) {
     var url = 'track_list'
     var type = 'GET';
     var data = {
       emotion: emotion,
-      level: value,
     };
 
     $.ajax({

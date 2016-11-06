@@ -418,3 +418,14 @@ body {
 #webcam_preview {
   border-radius: 500px;
 }
+
+#player-audio {
+  display: none;
+}
+
+.footer-logo {
+  width: 470px;
+}
+
+.header-logo {
+}
