@@ -18,6 +18,7 @@ class SpotifyClient
     RSpotify.authenticate('e30eb889fe964d6e9f125f5ca2912143', '0cda293abc524b2d95726eb88670aece')
     ids.map do |id|
       RSpotify::AudioFeatures.find(id)
+      sleep 1
     end
 	end
 end

@@ -22,7 +22,6 @@ namespace :tracks do
       track.speechiness = meta.speechiness
       track.valence = meta.valence
       puts track.save
-      sleep 1
     end
   end
 end
