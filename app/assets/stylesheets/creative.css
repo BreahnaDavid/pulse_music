@@ -429,3 +429,7 @@ body {
 
 .header-logo {
 }
+
+#spotify-button {
+  background-color: #2ebd59 !important;
+}

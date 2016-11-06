@@ -10,6 +10,9 @@
           #img#advertisement.center
         %br
         %a#photo-taker.page-scroll.btn.btn-default.btn-xl.sr-button{:href => "#"} Take It!
+        %br
+        %br
+        %a#spotify-button.btn.btn-default.btn-xl{:href => "#", target: 'blank' } Open Song on Spotify!
 
 :javascript
   var app_key = 'f9fdc87edada426e8f4ce4708adaa37e';
@@ -49,6 +52,7 @@
 
   $( document ).ready( function() {
     FACE.webcam.startPlaying( "webcam_preview" );
+    $('#spotify-button').hide();
   });
 
   $('#photo-taker').on("click", function (event) {
@@ -73,6 +77,8 @@
   }
 
   function playSong(response) {
+    $('#spotify-button').attr('href', "https://play.spotify.com/track/" + response.data.track_id);
+    $('#spotify-button').show();
     $('#player-audio').attr("src", response.data.preview_url);
     $('#player-source').trigger('load');
     $('#player-audio').trigger('play');
