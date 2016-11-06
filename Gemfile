@@ -22,7 +22,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml'
 gem 'bootstrap-sass'
-gem 'headshot'
 gem 'rspotify', '1.18.0'
 gem 'mime-types', '2.0'
 
