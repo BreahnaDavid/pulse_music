@@ -9,8 +9,8 @@ namespace :tracks do
     end
   end
 
-  task add_meta1: :environment do
-    track_ids = HuineaTrack.all.map(&:track_id)[0..100]
+  task add_meta: :environment do
+    track_ids = HuineaTrack.all.map(&:track_id)
     track_metas = SpotifyClient.audio_features(track_ids)
     track_metas.each do |meta|
       track = HuineaTrack.find_by(track_id: meta.id)
@@ -22,22 +22,7 @@ namespace :tracks do
       track.speechiness = meta.speechiness
       track.valence = meta.valence
       puts track.save
-    end
-  end
-
-  task add_meta2: :environment do
-    track_ids = HuineaTrack.all.map(&:track_id)[100..200]
-    track_metas = SpotifyClient.audio_features(track_ids)
-    track_metas.each do |meta|
-      track = HuineaTrack.find_by(track_id: meta.id)
-      track.acousticness = meta.acousticness
-      track.danceability = meta.danceability
-      track.energy = meta.energy
-      track.instrumentalness = meta.instrumentalness
-      track.liveness = meta.liveness
-      track.speechiness = meta.speechiness
-      track.valence = meta.valence
-      puts track.save
+      sleep 1
     end
   end
 end
