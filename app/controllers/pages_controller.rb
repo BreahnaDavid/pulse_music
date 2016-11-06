@@ -11,11 +11,24 @@ class PagesController < ApplicationController
   end
 
   def track_list
-    data = HuineaTrack.happy(params[:level])
+    data = HuineaTrack.send(track_type, params[:level].to_f / 100)
     render(
       json: {
-        data: data
+        data: data.first
       }
     )
+  end
+
+  private
+
+  def track_type
+    emotion = params[:emotion]
+    if ['neutral', 'surprise', 'happiness'].include? emotion
+      'happy'
+    elsif ['sadness', 'fear'].include? emotion
+      'sad'
+    else
+      'angry'
+    end
   end
 end

@@ -3,9 +3,9 @@ namespace :tracks do
   task load: :environment do
     tracks_group = SpotifyClient.audio_tracks
     tracks_group.each do |group|
-			group.each do |track|
-				HuineaTrack.create(track_id: track.id, preview_url: track.preview_url)
-			end
+      group.each do |track|
+        HuineaTrack.create(track_id: track.id, preview_url: track.preview_url)
+      end
     end
   end
 
@@ -14,6 +14,14 @@ namespace :tracks do
     track_metas = SpotifyClient.audio_features(track_ids)
     track_metas.each do |meta|
       track = HuineaTrack.find_by(track_id: meta.id)
+      track.acousticness = meta.acousticness
+      track.danceability = meta.danceability
+      track.energy = meta.energy
+      track.instrumentalness = meta.instrumentalness
+      track.liveness = meta.liveness
+      track.speechiness = meta.speechiness
+      track.valence = meta.valence
+
       track.valence = meta.valence
       track.energy = meta.energy
       track.danceability = meta.danceability

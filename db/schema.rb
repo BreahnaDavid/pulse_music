@@ -25,11 +25,15 @@ ActiveRecord::Schema.define(version: 20161105121712) do
   end
 
   create_table "huinea_tracks", force: :cascade do |t|
-    t.string  "track_id"
-    t.string  "preview_url"
-    t.decimal "valence"
-    t.decimal "danceability"
-    t.decimal "energy"
+    t.string "track_id"
+    t.string "preview_url"
+    t.float  "acousticness"
+    t.float  "danceability"
+    t.float  "energy"
+    t.float  "instrumentalness"
+    t.float  "liveness"
+    t.float  "speechiness"
+    t.float  "valence"
   end
 
 end

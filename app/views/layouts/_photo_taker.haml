@@ -1,0 +1,80 @@
+%section#about.bg-primary
+  .container
+    .row
+      .col-lg-8.col-lg-offset-2.text-center
+        %h2.section-heading Take a Photo - Get Your Songs
+        %hr.light/
+        %video#webcam_preview{ autoplay: true }
+        %img#img_snapshot.hidden{ src: ''}
+        .container
+          #img#advertisement.center
+        %br
+        %a#photo-taker.page-scroll.btn.btn-default.btn-xl.sr-button{:href => "#"} Take It!
+
+:javascript
+  var app_key = 'f9fdc87edada426e8f4ce4708adaa37e';
+  var client_id   = 'd99474c81ab443c68e1c55bf027b8239';
+
+  function success( result ) {
+    if( result.persons.length > 0 ) {
+      var emotions = result.persons[0]['expressions'];
+      var max_value = -1;
+      var max_emotion = "";
+
+      $.each(emotions, function(emotion, value) {
+        if (value.value > max_value) {
+          max_value = value.value;
+          max_emotion = emotion;
+        }
+      });
+
+      getMusic(max_emotion, max_value);
+
+    } else {
+      alert( 'No faces detected, PLease Try Again!' );
+    }
+  }
+
+  function failure( error ) {
+    alert( 'ATENTIE EROARE' );
+  }
+
+  function sendDetectRequest() {
+    var img = document.querySelector( "#img_snapshot" );
+    if( img.naturalWidth == 0 ||  img.naturalHeight == 0 ) // Check if a snapshot has been taken
+      return;
+    var imgBlob = FACE.util.dataURItoBlob( img.src );
+    FACE.sendImage( imgBlob, success, failure, app_key, client_id, 'expressions' );
+  }
+
+  $( document ).ready( function() {
+    FACE.webcam.startPlaying( "webcam_preview" );
+  });
+
+  $('#photo-taker').on("click", function (event) {
+    event.preventDefault();
+    FACE.webcam.takePicture( "webcam_preview", "img_snapshot" );
+    sendDetectRequest();
+  });
+
+  function getMusic(emotion, value) {
+    var url = 'track_list'
+    var type = 'GET';
+    var data = {
+      emotion: emotion,
+      level: value,
+    };
+
+    $.ajax({
+      url: url,
+      type: type,
+      data: data,
+      success: playSong,
+    });
+  }
+
+  function playSong(response) {
+    $('#player-audio').attr("src", response.data.preview_url);
+    $('#player-source').trigger('load');
+    $('#player-audio').trigger('play');
+  }

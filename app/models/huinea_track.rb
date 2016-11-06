@@ -4,17 +4,17 @@ class HuineaTrack < ActiveRecord::Base
   end
 
   def self.sad(level)
-    where("valence < ?", level).
-      order(valence: :desc)[0..5]
+    where("valence < ?", 1 - level).
+      order(valence: :desc)
   end
 
   def self.happy(level)
     where("danceability < ?", level).
-      order(danceability: :desc)[0..5]
+      order(danceability: :desc)
   end
 
   def self.angry(level)
     where("energy < ?", level).
-      order(energy: :desc)[0..5]
+      order(energy: :desc)
   end
 end

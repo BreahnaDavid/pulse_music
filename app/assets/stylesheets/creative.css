@@ -414,3 +414,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #222222;
 }
+
+#webcam_preview {
+  border-radius: 500px;
+}
