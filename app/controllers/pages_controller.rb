@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def track_list
-    best_track = BestTrack.new(params[:emotion])
+    best_track = ::BestTrack.new(params[:emotion])
     render(
       json: {
         data: best_track.search
