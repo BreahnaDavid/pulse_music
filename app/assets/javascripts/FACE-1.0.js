@@ -1,7 +1,7 @@
 var FACE = ( function() {
   // Private Section
   var K_VERSION                   = "1.0";
-  var K_SERVICE_URL               = "http://api.sightcorp.com/api/detect/";
+  var K_SERVICE_URL               = "https://api.sightcorp.com/api/detect/";
   var K_FORM_IMG_FIELD_NAME       = "img";
   var K_FORM_URL_FIELD_NAME       = "url";
   var K_FORM_CLIENT_ID_FIELD_NAME = "client_id";
