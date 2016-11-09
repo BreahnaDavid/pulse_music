@@ -416,7 +416,7 @@ body {
 }
 
 #webcam_preview {
-  border-radius: 500px;
+  border-radius: 30px;
 }
 
 #player-audio {
