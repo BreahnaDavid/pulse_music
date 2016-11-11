@@ -1,25 +1,9 @@
-# README
+# Pulse Music
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This codebase is the Rails app for Pulse Music, a service that generate your personal playlist based on your current mood
 
-Things you may want to cover:
+Forget about depressions and bad mood, You've just discovered what music really is!
 
-* Ruby version
+# Live Application
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# pulse_music
+https://pulse-music.herokuapp.com/
